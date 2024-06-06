@@ -1,5 +1,6 @@
+import Image from "next/image";
 import React from "react";
-import XIcon from "../XIcon";
+// import XIcon from "../XIcon";
 
 const TaskItem = ({ task, onToggleTask, onDeleteTask }) => {
   return (
@@ -24,7 +25,7 @@ const TaskItem = ({ task, onToggleTask, onDeleteTask }) => {
           onClick={() => onDeleteTask(task.id)}
           className="ml-auto text-red-500 hover:text-red-700"
         >
-          <XIcon />
+          <img src='https://icons.veryicon.com/png/o/miscellaneous/medium-thin-linear-icon/cross-23.png' width={20} height={20} />
         </button>
       </div>
     </div>

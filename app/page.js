@@ -19,10 +19,10 @@ export default function Home() {
     setTasks([...tasks, newTask]);
     setNewTaskText("");
 
-    let arrayOfTaskLocalStorage =
-      JSON.parse(localStorage.getItem("tasks")) || [];
-    arrayOfTaskLocalStorage.push(newTask);
-    localStorage.setItem("tasks", JSON.stringify(arrayOfTaskLocalStorage));
+    // let arrayOfTaskLocalStorage =
+    //   JSON.parse(localStorage.getItem("tasks")) || [];
+    // arrayOfTaskLocalStorage.push(newTask);
+    // localStorage.setItem("tasks", JSON.stringify(arrayOfTaskLocalStorage));
   };
 
   const handleToggleTask = (id) => {
@@ -36,9 +36,9 @@ export default function Home() {
   const handleDeleteTask = (id) => {
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
 
-    let updatedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    updatedTasks = updatedTasks.filter((task) => task.id !== id);
-    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+    // let updatedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    // updatedTasks = updatedTasks.filter((task) => task.id !== id);
+    // localStorage.setItem("tasks", JSON.stringify(updatedTasks));
   };
 
   const filteredTasks = tasks.filter((task) => {
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <div className="bg-gray-800 rounded p-4">
         <TaskList
-          tasks={filteredTasks}
+          tasks={tasks}
           onToggleTask={handleToggleTask}
           onDeleteTask={handleDeleteTask}
         />
