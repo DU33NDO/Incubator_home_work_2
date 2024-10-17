@@ -1,7 +1,7 @@
 "use client"
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { WebApp } from '@twa-dev/sdk';
+import WebApp from '@twa-dev/sdk'
 
 const inter = Inter({ subsets: ["latin"] });
 
