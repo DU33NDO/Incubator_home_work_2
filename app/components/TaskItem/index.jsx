@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-// import XIcon from "../XIcon";
 
 const TaskItem = ({ task, onToggleTask, onDeleteTask }) => {
   return (
